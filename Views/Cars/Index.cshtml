@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Tutorial3.Models.Car>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            kek
+            <p>@ViewData["tytuł"]</p>
+            <p>@ViewData["liczba"]</p>
+            <br /><br />
+            <p>@ViewBag</p>
+            <p>@ViewBag.tytul2</p>
+            <p>@ViewBag.liczba2</p>
+            <p>@ViewBag.tytul2</p>
+            <p>@ViewBag.liczba2</p>
+            <br /><br />
+            <p>Strongly typed</p>
+            <p>@Model.id</p>
+        </div>
+        <div class="col-md-9">
+            <table>
+                <tr><th>Id</th><th>Model</th></tr>
+                @foreach (var row in Model)
+                {
+                    <tr><td>@row.id</td><td>@row.Model</td></tr>
+                }
+            </table>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
